@@ -24,3 +24,22 @@ const arrayItem = array.find((item, index) => {
 console.log(arrayItem); // logs undefined
 
 console.log(objectItem); // logs undefined
+
+// ========================================
+// findIndex()
+// ========================================
+
+// Unlike find method, findIndex() returns the index of the first element matching
+// the specified criteria, if no element found, it returns -1
+
+const indexOfString = array.findIndex((item, index) => {
+	return typeof item === 'string';
+});
+
+console.log(indexOfString); // logs 2
+
+const indexOfString2 = array.findIndex((item, index) => {
+	return Array.isArray(item);
+});
+
+console.log(indexOfString2); // logs -1
