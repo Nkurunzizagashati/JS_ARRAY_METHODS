@@ -17,5 +17,10 @@ console.log(stringItem); // logs Fabrice
 const objectItem = array.find((item, index) => {
 	return typeof item === 'object';
 });
+const arrayItem = array.find((item, index) => {
+	return Array.isArray(item);
+});
+
+console.log(arrayItem); // logs undefined
 
 console.log(objectItem); // logs undefined
